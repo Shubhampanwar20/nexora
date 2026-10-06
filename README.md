@@ -302,6 +302,10 @@ nexora/
 │   ├── package.json
 │   └── package-lock.json
 │
+├── screenshots/
+│   ├── dashboard.png
+│   └── login.png
+│
 ├── .env.example
 ├── .gitignore
 └── README.md
@@ -583,13 +587,17 @@ Future improvements may include:
 
 ## 📸 Screenshots
 
-Screenshots can be added here as the project presentation is expanded.
+### Dashboard
 
-Example:
+The Nexora executive dashboard provides real-time visibility into organizational activity, active users, AI-generated operational insights, system health, analytics, and recent activity.
 
-```markdown
-![Nexora Dashboard](docs/screenshots/dashboard.png)
-```
+![Nexora Dashboard](./screenshots/dashboard.png)
+
+### Login
+
+The Nexora authentication experience provides a secure enterprise entry point with workspace-focused branding and access controls.
+
+![Nexora Login](./screenshots/login.png)
 
 ---
 
