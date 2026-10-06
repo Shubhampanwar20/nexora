@@ -1,0 +1,24 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Test and cache files
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Frontend
+node_modules/
+dist/
+
+# Backup files
+*.backup
+
+# macOS
+.DS_Store
