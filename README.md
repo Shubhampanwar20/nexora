@@ -1,14 +1,14 @@
 # Nexora
 
-> **AI-Powered Enterprise Operations & Intelligence Platform**
+### AI-Powered Enterprise Operations & Intelligence Platform
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/Shubhampanwar20/nexora)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)](https://react.dev/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?logo=postgresql)](https://www.postgresql.org/)
 
 Nexora is a full-stack enterprise operations and intelligence platform designed to help organizations manage workspaces, users, activity, audit logs, analytics, and data-driven operational insights from a centralized interface.
-
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Shubhampanwar20/nexora)
-[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 ---
 
@@ -91,7 +91,7 @@ The insight engine analyzes:
 - Active-user rate
 - Most common audit action
 
-Insights are generated for the selected organization and displayed through the dedicated **AI Insights** interface.
+Insights are generated for the selected organization and displayed through the dedicated AI Insights interface.
 
 > **Note:** The current insight engine is data-driven and rule-based. ML-based anomaly detection and more advanced intelligence capabilities are planned for future development.
 
@@ -190,33 +190,41 @@ Members are restricted to their assigned organization, while administrators can 
 
 ### Frontend
 
-- **React**
-- **TypeScript**
-- **Vite**
-- **React Router**
-- **Recharts**
-- **CSS**
+| Technology | Purpose |
+|---|---|
+| React | Frontend UI |
+| TypeScript | Type-safe application development |
+| Vite | Frontend development and build tooling |
+| React Router | Client-side routing |
+| Recharts | Analytics and data visualization |
+| CSS | UI styling |
 
 ### Backend
 
-- **Python 3.11**
-- **FastAPI**
-- **SQLAlchemy**
-- **Alembic**
-- **Pydantic**
-- **JWT Authentication**
+| Technology | Purpose |
+|---|---|
+| Python 3.11 | Backend programming language |
+| FastAPI | REST API framework |
+| SQLAlchemy | ORM and database interaction |
+| Alembic | Database migrations |
+| Pydantic | Data validation and schemas |
+| JWT | Authentication and access tokens |
 
 ### Database
 
-- **PostgreSQL**
+| Technology | Purpose |
+|---|---|
+| PostgreSQL | Persistent application database |
 
 ### Development Tools
 
-- **Git**
-- **GitHub**
-- **VS Code**
-- **npm**
-- **Python Virtual Environment**
+| Tool | Purpose |
+|---|---|
+| Git | Version control |
+| GitHub | Repository hosting |
+| VS Code | Development environment |
+| npm | Frontend package management |
+| Python Virtual Environment | Backend dependency isolation |
 
 ---
 
@@ -254,6 +262,7 @@ nexora/
 │   │   │   └── session.py
 │   │   │
 │   │   ├── middleware/
+│   │   │
 │   │   ├── models/
 │   │   │   ├── audit_log.py
 │   │   │   ├── organization.py
@@ -319,49 +328,49 @@ Nexora exposes REST API endpoints for authentication, organizations, users, dash
 
 ### Authentication
 
-```http
-POST /auth/login
-```
+| Method | Endpoint |
+|---|---|
+| `POST` | `/auth/login` |
 
 ### Organizations
 
-```http
-GET /organizations
-POST /organizations
-```
+| Method | Endpoint |
+|---|---|
+| `GET` | `/organizations` |
+| `POST` | `/organizations` |
 
 ### Users
 
-```http
-GET /users
-POST /users
-GET /users/me
-GET /users/{user_id}
-```
+| Method | Endpoint |
+|---|---|
+| `GET` | `/users` |
+| `POST` | `/users` |
+| `GET` | `/users/me` |
+| `GET` | `/users/{user_id}` |
 
 ### Dashboard
 
-```http
-GET /dashboard/summary
-```
+| Method | Endpoint |
+|---|---|
+| `GET` | `/dashboard/summary` |
 
 ### Audit Logs
 
-```http
-GET /audit-logs
-```
+| Method | Endpoint |
+|---|---|
+| `GET` | `/audit-logs` |
 
 ### Analytics
 
-```http
-GET /analytics/activity
-```
+| Method | Endpoint |
+|---|---|
+| `GET` | `/analytics/activity` |
 
 ### AI Insights
 
-```http
-GET /insights
-```
+| Method | Endpoint |
+|---|---|
+| `GET` | `/insights` |
 
 Interactive API documentation is available through FastAPI Swagger UI during local development.
 
@@ -391,9 +400,9 @@ A safe configuration template is provided in:
 
 ## 🗄️ Database & Migrations
 
-Nexora uses **PostgreSQL** for persistent application data.
+Nexora uses PostgreSQL for persistent application data.
 
-Database schema changes are managed through **Alembic migrations**.
+Database schema changes are managed through Alembic migrations.
 
 Apply the latest migrations with:
 
@@ -459,7 +468,7 @@ alembic upgrade head
 
 ### 4. Start the Backend
 
-From the `backend` directory:
+From the backend directory:
 
 ```bash
 python -m uvicorn app.main:app --reload --reload-dir app
@@ -572,16 +581,16 @@ Ensure users access only the organizations and functionality permitted by their 
 
 Future improvements may include:
 
-- [ ] Real-time notifications
-- [ ] Advanced analytics dashboards
-- [ ] ML-based anomaly detection
-- [ ] Automated report generation
-- [ ] Background job processing
-- [ ] Advanced organization administration
-- [ ] Expanded automated test coverage
-- [ ] CI/CD automation
-- [ ] Production deployment configuration
-- [ ] Additional enterprise integrations
+- Real-time notifications
+- Advanced analytics dashboards
+- ML-based anomaly detection
+- Automated report generation
+- Background job processing
+- Advanced organization administration
+- Expanded automated test coverage
+- CI/CD automation
+- Production deployment configuration
+- Additional enterprise integrations
 
 ---
 
@@ -611,9 +620,9 @@ Suggestions, improvements, and technical feedback are welcome.
 
 ## 👨‍💻 Author
 
-### Shubham Panwar
+**Shubham Panwar**
 
-**BCA — Artificial Intelligence & Data Science**
+BCA — Artificial Intelligence & Data Science
 
 - GitHub: [Shubhampanwar20](https://github.com/Shubhampanwar20)
 - LinkedIn: [Shubham Panwar](https://www.linkedin.com/in/shubham-panwar-a7a7502a8/)
@@ -630,4 +639,10 @@ No open-source license has been specified for this repository at this time.
 
 If you find the project useful or interesting, consider giving the repository a ⭐ on GitHub.
 
+---
+
+<div align="center">
+
 **Nexora — Turning enterprise operations into actionable intelligence.**
+
+</div>
