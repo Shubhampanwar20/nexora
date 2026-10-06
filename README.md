@@ -3,133 +3,123 @@ cd ~/Documents/GitHub/nexora
 cat > README.md <<'EOF'
 # Nexora
 
-> AI-powered enterprise operations and intelligence platform for workspace management, analytics, audit monitoring, and operational insights.
+> AI-Powered Enterprise Operations & Intelligence Platform
 
-Nexora is a full-stack enterprise platform designed to help organizations manage users, monitor workspace activity, analyze operational data, and generate data-driven insights from audit activity.
+Nexora is a full-stack enterprise operations platform for managing organizations, users, workspace activity, audit logs, analytics, and data-driven operational insights.
 
 ---
 
 ## 🚀 Features
 
 ### 🔐 Authentication & Authorization
-- Secure JWT-based authentication
+
+- JWT-based authentication
 - Role-based access control
 - Admin and Member roles
 - Protected API endpoints
-- Organization-level data isolation
+- Organization-level access isolation
+- Password hashing
 
 ### 🏢 Organization Management
+
 - Create and manage organizations
 - Workspace-based organization selection
 - Organization-specific users and activity
 - Admin-only organization management
 
 ### 👥 User Management
-- Create and manage workspace users
-- View user details
-- Track active and inactive users
-- Organization-specific user access
-- Admin-only user creation
 
-### 📊 Dashboard
+- Create users within an organization
+- View organization users
+- View individual user details
+- Track active users
+- Organization-level user isolation
+- Admin-only user management
+
+### 📊 Executive Dashboard
+
+The dashboard provides an overview of workspace operations, including:
+
 - Total users
 - Active users
 - Audit events
-- AI-generated insights count
-- System health indicator
-- Recent workspace activity
+- AI insight count
+- System health
+- Recent activity
 
 ### 🤖 AI Insights
-Nexora analyzes workspace activity and generates operational insights based on audit data.
 
-Insights include:
-- Workspace performance
-- Workforce activity
-- Recent activity patterns
-- Operational intelligence
+Nexora provides data-driven operational insights based on organization activity.
 
-The insights are dynamically generated for the selected workspace.
+The insights service analyzes:
+
+- Total users
+- Active users
+- Audit events
+- Recent activity
+- Previous-period activity
+- Active-user rate
+- Most common audit action
+
+Insights are generated for the selected organization and presented through the AI Insights interface.
 
 ### 📈 Analytics
-- Workspace activity analytics
-- Configurable activity period
-- Daily audit-event visualization
+
+- Organization-level activity analytics
+- Configurable activity periods
+- Daily audit-event trends
 - Workspace-specific analytics
-- Activity trend monitoring
+- Activity trend visualization
+
+Supported analytics period:
+
+- 7–90 days
 
 ### 📋 Audit Logs
-- Track important workspace events
-- Login activity monitoring
-- Organization and user activity
-- Admin-only audit log access
 
-### ⚙️ Settings
-- Workspace-specific preferences
-- Notification settings
+Nexora records important operational events, including authentication and administrative activity.
+
+Audit logs are available to administrators and are scoped to the selected organization.
+
+### ⚙️ Workspace Settings
+
+Settings are maintained per organization and include:
+
+- Notifications
 - Activity alerts
 - Security alerts
-- Persistent preferences using browser storage
 - Unsaved-change detection
+- Persistent browser-based preferences
 
 ---
 
-## 🏗️ Tech Stack
-
-### Backend
-
-- Python
-- FastAPI
-- SQLAlchemy
-- PostgreSQL
-- Alembic
-- JWT Authentication
-- Pydantic
-
-### Frontend
-
-- React
-- TypeScript
-- Vite
-- React Router
-- Recharts
-- Lucide React
-
-### Development Tools
-
-- Git
-- GitHub
-- VS Code
-- Uvicorn
-- npm
-
----
-
-## 🏛️ Architecture
+## 🏗️ Architecture
 
 ```text
-                    ┌─────────────────────┐
-                    │      Nexora UI      │
-                    │ React + TypeScript  │
-                    │       + Vite        │
-                    └──────────┬──────────┘
-                               │
-                               │ REST API
-                               ▼
-                    ┌─────────────────────┐
-                    │     FastAPI API     │
-                    │       Backend       │
-                    └──────────┬──────────┘
-                               │
-              ┌────────────────┼────────────────┐
-              │                │                │
-              ▼                ▼                ▼
-       ┌────────────┐   ┌────────────┐   ┌────────────┐
-       │    Auth    │   │  Business  │   │ Analytics  │
-       │    & RBAC  │   │   Logic    │   │ & Insights │
-       └────────────┘   └────────────┘   └────────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │     PostgreSQL      │
-                    │      Database       │
-                    └─────────────────────┘
+                         ┌───────────────────────┐
+                         │      Nexora Web UI    │
+                         │   React + TypeScript  │
+                         │         + Vite        │
+                         └───────────┬───────────┘
+                                     │
+                                  /api/*
+                                     │
+                                     ▼
+                         ┌───────────────────────┐
+                         │      FastAPI API      │
+                         │       Backend         │
+                         └───────────┬───────────┘
+                                     │
+              ┌──────────────────────┼──────────────────────┐
+              │                      │                      │
+              ▼                      ▼                      ▼
+       ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+       │     Auth     │      │   Business   │      │  Analytics   │
+       │    & RBAC    │      │    Logic     │      │  & Insights  │
+       └──────────────┘      └───────┬──────┘      └──────────────┘
+                                     │
+                                     ▼
+                            ┌─────────────────┐
+                            │   PostgreSQL    │
+                            │    Database     │
+                            └─────────────────┘
